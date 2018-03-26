@@ -1,0 +1,10 @@
+/build/**
+/coverage/**
+/prod/**
+/dashboard/**
+/docs/**
+/jsdoc/**
+/tmp/**
+/dist/**
+/dist-release/**
+/src/polyfills/**

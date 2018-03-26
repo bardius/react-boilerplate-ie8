@@ -1,0 +1,68 @@
+{
+    "browser": true,
+    "roots": [
+        "specs/src",
+        "src"
+    ],
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageDirectory": "reports/unit-tests",
+    "coverageReporters": [
+        "json",
+        "lcov",
+        "text",
+        "cobertura",
+        "text-summary"
+    ],
+    "collectCoverageFrom": [
+        "src/**/**",
+        "!**/__mocks__/**",
+        "!src/assets/**/**",
+        "!**/index.js",
+        "!**/postcss.config.js"
+    ],
+    "coveragePathIgnorePatterns": [
+        "/target/",
+        "/dist/",
+        "/dist-release/",
+        "<rootDir>/src/assets/*"
+    ],
+    "coverageThreshold":{
+        "global": {
+            "branches": 0,
+            "functions": 0,
+            "lines": 0,
+            "statements": 0
+        }
+    },
+    "globals": {
+        "webpack": {
+            "title": "Brand Page Title",
+            "brandName": "Brand",
+            "basePath": "/"
+        }
+    },
+    "moduleNameMapper": {
+        "^actions(.*)$": "<rootDir>/src/actions$1",
+        "^assets(.*)$": "<rootDir>/src/assets$1",
+        "^components(.*)$": "<rootDir>/src/components$1",
+        "^constants(.*)$": "<rootDir>/src/constants$1",
+        "^containers(.*)$": "<rootDir>/src/containers$1",
+        "^factories(.*)$": "<rootDir>/src/factories$1",
+        "^journeys(.*)$": "<rootDir>/src/journeys$1",
+        "^locales(.*)$": "<rootDir>/src/locales$1",
+        "^reducers(.*)$": "<rootDir>/src/reducers$1",
+        "^sass(.*)$": "<rootDir>/src/sass$1",
+        "^services(.*)$": "<rootDir>/src/services$1",
+        "^store(.*)$": "<rootDir>/src/store$1",
+        "^utilities(.*)$": "<rootDir>/src/utilities$1"
+    },
+    "testURL": "http://localhost.unit.tests:8080",
+    "rootDir": "../",
+    "setupTestFrameworkScriptFile": "<rootDir>/specs/jsdom.config.js",
+    "moduleFileExtensions": [
+        "js",
+        "jsx"
+    ],
+    "testResultsProcessor": "jest-junit"
+}
